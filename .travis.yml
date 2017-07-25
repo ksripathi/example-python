@@ -5,11 +5,10 @@ language: python
 python:
   - 2.7
 
-install:
-  - pip install codecov
-
+install: true
+  
 script:
-  - coverage run tests.py
+  - python tests.py
 
 after_success:
-  - codecov
+  - ls
