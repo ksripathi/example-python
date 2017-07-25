@@ -12,3 +12,11 @@ script:
 
 after_success:
   - ls
+notifications:
+  email:
+    recipients:
+      - kammari.sripathi@gmail.com
+  
+    on_success: always # default: change
+    on_failure: always # default: always
+
