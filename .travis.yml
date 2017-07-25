@@ -1,4 +1,7 @@
-sudo: false
+sudo: required
+
+env:
+  - OS_TYPE=centos OS_VERSION=6
 
 language: python
 
@@ -11,12 +14,5 @@ script:
   - python tests.py
 
 after_success:
-  - ls
-notifications:
-  email:
-    recipients:
-      - kammari.sripathi@gmail.com
-  
-    on_success: always # default: change
-    on_failure: always # default: always
+  - cat /etc/issue
 
