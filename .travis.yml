@@ -12,8 +12,8 @@ before_install:
   - wget http://files.vlabs.ac.in/downloads/emacs.tar.gz
   - tar -xvzf emacs.tar.gz
   - cp -r emacs /home/travis/
-  - git clone https://github.com/ksripathi/test-project1
-  - cd test-project1
+  - git clone https://github.com/ksripathi/test-project
+  - cd test-project
   - make
   - mysql -e 'CREATE DATABASE myapp_test;'
   - mysql -e 'show databases;'
