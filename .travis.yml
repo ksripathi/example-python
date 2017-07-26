@@ -20,7 +20,7 @@ before_install:
   - cd build/code/
   - export PYTHONPATH=$(pwd)
   - cd deployment
-  - pip install Flask Flask-SQLAlchemy requests flask-cors flask-testing pyyaml
+  - pip install oursql Flask Flask-SQLAlchemy requests flask-cors flask-testing pyyaml
   - python db_setup.py  
 
 install: 
