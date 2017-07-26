@@ -25,7 +25,7 @@ before_install:
 install: 
   - sudo apt-get install emacs -y
   
-script: ./run_tests.sh
+script: ../../../run_tests.sh
 
 after_success:
   - cat /etc/issue
