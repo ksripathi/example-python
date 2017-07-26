@@ -1,16 +1,19 @@
 sudo: required
 
-env:
-  matrix:
-  - OS_TYPE=centos OS_VERSION=6
-  - OS_TYPE=centos OS_VERSION=7
-
 language: python
 
 python:
   - 2.7
 
-install: true
+services:
+  - mysql
+
+before_install:
+
+  - mysql -e 'CREATE DATABASE myapp_test;'
+
+install: 
+  - sudo apt-get update -y
   
 script:
   - python tests.py
