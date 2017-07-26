@@ -21,8 +21,7 @@ before_install:
   - export PYTHONPATH=$(pwd)
   - cd deployment
   - python setup.py install
-  - python db_setup.py
-  
+  - python db_setup.py  
 
 install: 
   - sudo apt-get update -y
