@@ -15,7 +15,7 @@ before_install:
   - git clone https://github.com/ksripathi/test-project
   - cd test-project
   - make
-  - mysql -e 'CREATE DATABASE myapp_test;'
+  - mysql -e 'CREATE DATABASE lds;'
   - mysql -e 'show databases;'
   - cd build/code/
   - export PYTHONPATH=$(pwd)
