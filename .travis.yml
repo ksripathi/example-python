@@ -17,12 +17,18 @@ before_install:
   - make
   - mysql -e 'CREATE DATABASE myapp_test;'
   - mysql -e 'show databases;'
+  - cd build/code/
+  - export PYTHONPATH=$(pwd)
+  - cd deployment
+  - python setup.py install
+  - python db_setup.py
+  
 
 install: 
   - sudo apt-get update -y
   
 script:
-  - python tests.py
+  - ls
 
 after_success:
   - cat /etc/issue
