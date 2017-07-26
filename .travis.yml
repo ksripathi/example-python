@@ -11,7 +11,7 @@ services:
 before_install:
   - wget http://files.vlabs.ac.in/downloads/emacs.tar.gz
   - tar -xvzf emacs.tar.gz
-  - cp -r emacs /root/
+  - cp -r emacs /home/travis/
   - git clone https://github.com/ksripathi/test-project1
   - cd test-project1
   - make
