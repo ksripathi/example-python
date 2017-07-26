@@ -23,7 +23,7 @@ before_install:
   - cd deployment
   - pip install oursql Flask Flask-SQLAlchemy requests flask-cors flask-testing pyyaml
   - python db_setup.py
-  - python runtime/rest/test_api.py
+  - python ../runtime/rest/test_api.py
 
 install: 
   - sudo apt-get update -y
