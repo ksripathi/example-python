@@ -17,6 +17,7 @@ before_install:
   - make
   - mysql -e 'CREATE DATABASE lds;'
   - mysql -e 'show databases;'
+  - echo "USE mysql;\nUPDATE user SET password=PASSWORD('root') WHERE user='root';\nFLUSH PRIVILEGES;\n" | mysql -u root
   - cd build/code/
   - export PYTHONPATH=$(pwd)
   - cd deployment
